@@ -7,4 +7,4 @@ spring:
     config:
       server:
         native:
-          search-locations: file:///D:\Proyectos\Eagle-eye\configuration-server\src\main\config\licensingservice
+          search-locations: classpath:/configs/{application}
