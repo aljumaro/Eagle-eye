@@ -1,5 +1,5 @@
 tracer:
-  property: "I AM THE DEFAULT"
+  property: "I AM THE DEFAULT CHANGED"
   
 spring:
   jpa:
@@ -10,7 +10,7 @@ spring:
         dialect: "org.hibernate.dialect.Oracle10gDialect"
   datasource:
     platform: "oracle"
-    url: "jdbc:oracle:thin:@****:1521:BAHIA"
+    url: "jdbc:oracle:thin:@192.168.11.61:1521:BAHIA"
     username: "ARQUIVO"
     password: "admin"
     testWhileIdle: "true"
