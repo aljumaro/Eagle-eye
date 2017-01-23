@@ -6,24 +6,29 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
+import com.thoughtmechanix.licenses.boundary.dto.Organization;
+
 @Entity
 @Table(name = "TEMP_LICENSE")
 public class License {
 
 	@Id
 	private String id;
-	
+
 	@Column(name = "PRODUCT_NAME")
 	private String productName;
-	
+
 	@Column(name = "LICENSE_TYPE")
 	private String licenseType;
-	
+
 	@Column(name = "ORGANIZATION_ID")
 	private String organizationId;
-	
+
 	@Transient
 	private String comment;
+
+	@Transient
+	private Organization organization;
 
 	public License withId(String id) {
 		this.id = id;
@@ -83,6 +88,14 @@ public class License {
 
 	public void setComment(String comment) {
 		this.comment = comment;
+	}
+
+	public Organization getOrganization() {
+		return organization;
+	}
+
+	public void setOrganization(Organization organization) {
+		this.organization = organization;
 	}
 
 }

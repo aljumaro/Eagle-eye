@@ -1,16 +1,14 @@
-package com.thoughtmechanix.licenses;
+package com.thoughtmechanix.organization;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
 @EnableEurekaClient
-@EnableDiscoveryClient
-public class LicensingServiceApplication {
+public class OrganizationServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LicensingServiceApplication.class, args);
+		SpringApplication.run(OrganizationServiceApplication.class, args);
 	}
 }

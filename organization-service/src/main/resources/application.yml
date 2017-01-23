@@ -3,12 +3,13 @@ server:
 
 spring:
   application:
-    name: licensingservice
+    name: organizationservice
   profiles:
     active: default
   cloud:
     config:
       uri: http://localhost:8888
+      
       
 eureka:
   instance:

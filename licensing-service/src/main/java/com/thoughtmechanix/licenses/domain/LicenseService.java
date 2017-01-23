@@ -9,5 +9,7 @@ public interface LicenseService {
 	public License findByOrganizationIdAndId(String organizationId, String id);
 	
 	public License save(License license);
+	
+	public License getLicense(String organizationId, String id, String clientType);
 
 }

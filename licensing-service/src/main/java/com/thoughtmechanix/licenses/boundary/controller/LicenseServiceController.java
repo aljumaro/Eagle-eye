@@ -35,6 +35,13 @@ public class LicenseServiceController {
 		return licenseService.findByOrganizationIdAndId(organizationId, licenseId);
 	}
 	
+	@GetMapping(value = "/{licenseId}/{clientType}")
+	public License getLicense(@PathVariable("organizationId") String organizationId,
+			@PathVariable("licenseId") String licenseId,
+			@PathVariable("clientType") String clientType) {
+		return licenseService.getLicense(organizationId, licenseId, clientType);
+	}
+	
 	@PostMapping
 	public License saveLicense(@PathVariable("organizationId") String organizationId, @RequestBody License license) {
 		license.setOrganizationId(organizationId);
