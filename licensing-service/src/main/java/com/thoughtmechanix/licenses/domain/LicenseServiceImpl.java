@@ -1,6 +1,7 @@
 package com.thoughtmechanix.licenses.domain;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,7 +67,10 @@ public class LicenseServiceImpl implements LicenseService {
 
 	private Organization retrieveOrganizationInfo(String organizationId, String clientType) {
 		if (clientType.equals("discovery")) {
-			return organizationDiscoveryClient.getOrganizationInfo(organizationId);
+			Optional<Organization> organizationInfo = organizationDiscoveryClient.getOrganizationInfo(organizationId);
+			if (organizationInfo.isPresent()) {
+				return organizationInfo.get();
+			}
 		}
 		
 		return null;

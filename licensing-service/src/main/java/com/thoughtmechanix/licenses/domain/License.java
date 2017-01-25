@@ -1,5 +1,7 @@
 package com.thoughtmechanix.licenses.domain;
 
+import java.util.Optional;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -9,7 +11,7 @@ import javax.persistence.Transient;
 import com.thoughtmechanix.licenses.boundary.dto.Organization;
 
 @Entity
-@Table(name = "TEMP_LICENSE")
+@Table(name = "LICENSE")
 public class License {
 
 	@Id
