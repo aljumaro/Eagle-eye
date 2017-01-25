@@ -67,10 +67,7 @@ public class LicenseServiceImpl implements LicenseService {
 
 	private Organization retrieveOrganizationInfo(String organizationId, String clientType) {
 		if (clientType.equals("discovery")) {
-			Optional<Organization> organizationInfo = organizationDiscoveryClient.getOrganizationInfo(organizationId);
-			if (organizationInfo.isPresent()) {
-				return organizationInfo.get();
-			}
+			 organizationDiscoveryClient.getOrganizationInfo(organizationId).orElse(null);
 		}
 		
 		return null;
