@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 import com.thoughtmechanix.licenses.boundary.dto.Organization;
 
 @Component
-public class OrganizationDiscoveryClient {
+public class OrganizationDiscoveryClient{
 
 	private static final String ORGANIZATION_SERVICE_APP_NAME = "organizationservice";
 	private static final String ORGANIZACION_SERVICE_URI_TEMPLATE = "%sv1/organizations/%s";

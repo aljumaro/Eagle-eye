@@ -1,7 +1,5 @@
 package com.thoughtmechanix.licenses.domain;
 
-import java.util.Optional;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -49,6 +47,11 @@ public class License {
 
 	public License withOrganizationId(String organizationId) {
 		this.organizationId = organizationId;
+		return this;
+	}
+
+	public License withComment(String comment) {
+		this.comment = comment;
 		return this;
 	}
 
