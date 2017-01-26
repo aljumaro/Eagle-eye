@@ -1,0 +1,14 @@
+zuul:
+  ignored-services: '*'
+  prefix: /api
+  routes:
+    organizationservice: organization/**
+    licensingservice: licensing/**
+    
+hystrix:
+  command:
+    licensingservice:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2500

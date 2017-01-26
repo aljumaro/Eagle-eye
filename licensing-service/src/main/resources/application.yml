@@ -1,5 +1,5 @@
 server:
-  port: ${PORT:8081}
+  port: ${PORT:0}
 
 spring:
   application:
@@ -18,3 +18,8 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+      
+logging:
+  level:
+    com.thoughtmechanix.licenses.infrastructure.httpfilter.usercontext.UserContextFilter: DEBUG
+    com.thoughtmechanix.licenses.infrastructure.requestinterceptor.UserContextInterceptor: DEBUG
